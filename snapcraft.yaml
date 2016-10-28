@@ -1,0 +1,27 @@
+name: mailpile
+version: master
+summary: email client with user-friendly encryption and privacy features
+description: |
+  Mailpile is a modern, fast web-mail client with user-friendly encryption and
+  privacy features. The development of Mailpile is funded by a large community
+  of backers and all code related to the project is and will be released under
+  an OSI approved Free Software license.
+
+grade: devel
+confinement: strict
+
+apps:
+  mailpile:
+    command: mp
+    plugs: [home, network, network-bind]
+
+parts:
+  mailpile:
+    source: .
+    plugin: python
+    python-version: python2
+    build-packages:
+      - openssl
+      - libjpeg-dev
+    stage-packages:
+      - python-pbr
