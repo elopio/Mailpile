@@ -8,7 +8,7 @@ description: |
   an OSI approved Free Software license.
 
 grade: devel
-confinement: strict
+confinement: devmode
 
 apps:
   mailpile:
