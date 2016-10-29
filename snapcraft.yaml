@@ -12,7 +12,7 @@ confinement: devmode
 
 apps:
   mailpile:
-    command: mp
+    command: env MAILPILE_SHARED=$SNAP/share/mailpile mp
     plugs: [home, network, network-bind]
 
 parts:
